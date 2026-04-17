@@ -1,0 +1,31 @@
+/* Анимация загрузки.
+Задаем размер анимации.
+*/
+.loader {
+  display: none;
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+}
+
+.loader_active {
+  display: block;
+}
+
+/* Деаем контейнер для курсов валют */
+.item {
+  display: flex;
+  gap: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+
+/* Стили для отображения курса валют */
+.item__code {
+  font-weight: bold;
+}
+
+.item__value {
+  min-width: 30px;
+}
