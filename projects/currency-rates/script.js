@@ -33,5 +33,4 @@ function loadCurrencyRates() {
       });
 }
 
-// Загрузка данных на страницу (при ее загрузке)
 document.addEventListener('DOMContentLoaded', loadCurrencyRates);
