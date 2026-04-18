@@ -14,28 +14,28 @@ let currentIndex = 0;
 3. Иначе обычное переключение (вперед-назад)
 */
 function showSlide(index) {
-    if (index < 0) {
-        currentIndex = slides.length - 1;
-    } else if (index >= slides.length) {
-        currentIndex = 0;
-    } else {
-        currentIndex = index;
-    }
+  if (index < 0) {
+    currentIndex = slides.length - 1;
+  } else if (index >= slides.length) {
+    currentIndex = 0;
+  } else {
+    currentIndex = index;
+  }
 
-    slides.forEach((slide, i) => {
-        slide.classList.toggle('slider__item_active', i === currentIndex);
-    });
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('slider__item_active', i === currentIndex);
+  });
 
-    dots.forEach((dot, i) => {
-        dot.classList.toggle('slider__dot_active', i === currentIndex);
-    });
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('slider__dot_active', i === currentIndex);
+  });
 }
 
 prev.onclick = () => showSlide(currentIndex - 1);
 next.onclick = () => showSlide(currentIndex + 1);
 
 dots.forEach((dot, i) => {
-    dot.onclick = () => showSlide(i);
+  dot.onclick = () => showSlide(i);
 });
 
 // при запуске отображается перввя фотография

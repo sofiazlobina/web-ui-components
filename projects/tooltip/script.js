@@ -1,19 +1,18 @@
 let activeTooltip = null;
 let activeElement = null;
 
+document.addEventListener("click", function(event) {
+  const target = event.target.closest(".has-tooltip");
 
-  document.addEventListener("click", function (event) {
-    const target = event.target.closest(".has-tooltip");
-
-    // Закрытие всплывающей подсказки через клик по любой области экрана
-    if (!target) {
-        if (activeTooltip) {
-        activeTooltip.remove();
-        activeTooltip = null;
-        activeElement = null;
-        }
-        return;
+  // Закрытие всплывающей подсказки через клик по любой области экрана
+  if (!target) {
+    if (activeTooltip) {
+      activeTooltip.remove();
+      activeTooltip = null;
+      activeElement = null;
     }
+    return;
+  }
 
   event.preventDefault();
 
